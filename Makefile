@@ -6,7 +6,7 @@ SOURCE_DIR = src
 BUILD_DIR = build
 
 # Files
-SRC_FILES = $(wildcard $(SOURCE_DIR)/*.c)
+SRC_FILES = $(wildcard $(SOURCE_DIR)/*.cu)
 OUT_FILE = $(BUILD_DIR)/aes
 
 # Default target
@@ -23,6 +23,9 @@ $(OUT_FILE): $(SRC_FILES) | $(BUILD_DIR)
 # Clean build files
 clean:
 	rm -rf $(BUILD_DIR)
+
+run:
+	./build/aes	
 
 # Phony targets
 .PHONY: all clean
